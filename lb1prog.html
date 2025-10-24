@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота 1 (Жовто-Помаранчевий)</title>
+</head>
+<!--
+  Встановлюємо "жовто-помаранчевий" фон для всієї сторінки.
+  #FFDAB9 - це колір "PeachPuff" (персиковий/світло-помаранчевий).
+-->
+<body bgcolor="#FFDAB9">
+
+    <!--
+      Головна таблиця макета.
+      Вона структурує сторінку на 4 секції:
+      1. Шапка (Header)
+      2. Меню навігації (Navigation menu)
+      3. Тіло (Content + Sidebar)
+      4. Підвал (Footer)
+    -->
+    <table border="0" width="100%" cellpadding="5" cellspacing="0">
+
+        <!-- ======================= 1. HEADER (Шапка) ======================= -->
+        <!-- #FFA500 - це "Orange" (Помаранчевий) -->
+        <tr bgcolor="#FFA500">
+            <td colspan="2" align="center">
+                <h2>Лабораторна робота 1</h2>
+            </td>
+        </tr>
+
+        <!-- ======================= 3. BODY (Тіло сторінки) ======================= -->
+        <tr>
+            <!-- 3a. Основний вміст (Ліва колонка) -->
+            <!--
+              valign="top" притискає вміст до верху.
+              bgcolor="#FFFFFF" (білий) для кращої читабельності.
+            -->
+            <td width="75%" valign="top" bgcolor="#FFFFFF">
+
+
+                <!-- === 1. Математична формула === -->
+                <!--
+                  Замінив h4 та p. Заголовок тепер 'Математична формула',
+                  а текст формули в одному параграфі.
+                -->
+                <h4 id="formula">Математична формула</h4>
+                <p>
+                    Загальна кількість перестановок з <i>n</i> елементів дорівнює <b>добутку всіх цілих чисел</b> від <em>1</em> до <i>n</i>:<br>
+                    P<sub>n</sub> = 1 &bull; 2 &bull; 3 &bull; ... &bull; (n−2) &bull; (n−1) &bull; n<br>
+                </p>
+                <hr>
+
+                <!-- === 2. Список дисциплін === -->
+                <h4 id="disciplines"> Список дисциплін 3-го курсу</h4>
+                <dl>
+                    <dt><b>Веб-розробка</b></dt>
+                    <dd>Створення веб-сайтів</dd>
+                    <dt><b>Моделювання систем</b></dt>
+                    <dd>Побудова математичних моделей</dd>
+                    <dt><b>Соціальна психологія та конфліктологія</b></dt>
+                    <dd>Вивчає поведінку та процеси, що відбуваються у групах</dd>
+                    <dt><b>Тестування програмного забезпечення</b></dt>
+                    <dd>Тести програмного забезпечення</dd>
+                    <dt><b>Архітектура комп'ютерів</b></dt>
+                    <dd>Побудова сучасних комп'ютерних машин</dd>
+                    <dt><b>Комп'ютерна схемотехніка</b></dt>
+                    <dd>Апаратна частина систем</dd>
+                    <dt><b>Крос-платформне програмування</b></dt>
+                    <dd>Створення програм, що працюють на різних ОС</dd>
+                    <dt><b>Системне програмне забезпечення</b></dt>
+                    <dd>ОС та драйвери</dd>
+                    <dt><b>Фізкультура</b></dt>
+                    <dd>Основи фізичної підготовки</dd>
+                </dl>
+                <hr>
+
+                <!-- === 3. Періодична таблиця === -->
+                <h4 id="periodic_table">Фрагмент табличного представлення періодичної системи хімічних елементів</h4>
+                <table border="1" cellpadding="5" cellspacing="0">
+                    <tr align="center">
+                        <td>H<br>Водень</td>
+                        <td>He<br>Гелій</td>
+                        <td>Li<br>Літій</td>
+                        <td>Be<br>Берилій</td>
+                    </tr>
+                    <tr align="center">
+                        <td>B<br>Бор</td>
+                        <td>C<br>Вуглець</td>
+                        <td>N<br>Азот</td>
+                        <td>O<br>Кисень</td>
+                    </tr>
+                </table>
+                <br>
+
+            </td>
+
+            <!-- 3b. Бічна колонка (Права колонка) -->
+            <!-- #FFFFE0 - "LightYellow" (Світло-жовтий) -->
+            <td width="25%" valign="top" bgcolor="#FFFFE0">
+
+                <!-- === 4. Форма === -->
+                <h4 id="pc_form">Форма (Комплектуючі ПК)</h4>
+                <form action="#" method="get">
+                    <fieldset>
+
+                        <label for="cpu_model">Процесор:</label>
+                        <input type="text" id="cpu_model" name="cpu_model" size="20"><br><br>
+
+                        <label for="gpu_model">Відеокарта:</label>
+                        <input type="text" id="gpu_model" name="gpu_model" size="20"><br><br>
+
+                        <!-- Змінено "ОЗП (ГБ)" на "Оперативна пам'ять (ГБ)" -->
+                        <label for="ram_size">Оперативна пам'ять (ГБ):</label>
+                        <input type="text" id="ram_size" name="ram_size" size="5"><br><br>
+
+                        <!-- Повністю замінено групу радіокнопок -->
+                        Тип накопичувача:<br>
+                        <input type="radio" id="drive_ssd" name="drive_type" value="ssd" checked>
+                        <label for="drive_ssd">SSD</label><br>
+                        <input type="radio" id="drive_hdd" name="drive_type" value="hdd">
+                        <label for="drive_hdd">HDD</label><br>
+                        <input type="radio" id="drive_nvme" name="drive_type" value="nvme">
+                        <label for="drive_nvme">NVMe</label>
+                        <br><br>
+
+                        <!-- Додано нове поле "Блок живлення" -->
+                        <label for="psu_model">Блок живлення:</label>
+                        <input type="text" id="psu_model" name="psu_model" size="20"><br><br>
+
+                        <input type="submit" value="Відправити">
+                        <input type="reset" value="Очистити">
+                    </fieldset>
+                </form>
+                <hr>
+
+                <!-- === 5. Карта зображень === -->
+                <h4 id="image_map">Карта зображень</h4>
+                <p>Натисніть на секцію зображення:</p>
+                <!--
+                  Зображення-заглушка 200x150.
+                  Розділене на 3 горизонтальні частини по 50px.
+                -->
+                <img src="https://placehold.co/200x150/EEEEEE/333333?text=Університет%0A%0AКафедра%0A%0AРозклад"
+                     alt="Карта посилань ХНУРЕ"
+                     usemap="#nureMap"
+                     width="200"
+                     height="150"
+                     border="1">
+                <map name="nureMap">
+                    <!-- 1. Університет (Верхня третина 0-49px) -->
+                    <area shape="rect"
+                          coords="0,0,200,49"
+                          href="https://nure.ua/"
+                          alt="Сайт ХНУРЕ"
+                          target="_blank">
+                    <!-- 2. Кафедра (Середня третина 50-99px) -->
+                    <area shape="rect"
+                          coords="0,50,200,99"
+                          href="https://nure.ua/faculty/fakultet-kompyuternoyi-inzheneriyi-ta-upravlinnya"
+                          alt="Сайт кафедри КІУ"
+                          target="_blank">
+                    <!-- 3. Розклад (Нижня третина 100-150px) -->
+                    <area shape="rect"
+                          coords="0,100,200,150"
+                          href="https://cist.nure.ua/ias/app/tt/f?p=778:2:2028767664413727::NO:::"
+                          alt="Розклад CIST"
+                          target="_blank">
+                </map>
+
+            </td>
+        </tr>
+
+        <!-- ======================= 4. FOOTER (Підвал) ======================= -->
+        <tr bgcolor="#FFA500">
+            <td colspan="2" align="center">
+                <p><i>(c) 2025. Робота виконана з використанням табличної верстки без CSS.</i></p>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
